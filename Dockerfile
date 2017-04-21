@@ -57,6 +57,7 @@ RUN set -x \
     && apk --no-cache add --virtual .builddeps.1 \
         perl \
         sed \
+    && pip3 install wheel \
     && cd /tmp \
     && git clone --recursive https://github.com/deepmind/sonnet \
 
@@ -87,7 +88,7 @@ RUN set -x \
     && patch -p1 < 10.patch \  
     && bazel build ${EXTRA_BAZEL_ARGS} --config=opt :install \
     && bazel-bin/install /tmp/sonnet_pkg \
-    && pip install /tmp/sonnet_pkg/sonnet-${SONNET_VERSION}-py3-none-any.whl \
+    && pip3 install /tmp/sonnet_pkg/sonnet-${SONNET_VERSION}-py3-none-any.whl \
     && cp -r sonnet/examples /code/ \
     ## clean
     && apk del \
