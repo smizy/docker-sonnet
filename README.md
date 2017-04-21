@@ -1,4 +1,7 @@
 # docker-sonnet
+[![](https://images.microbadger.com/badges/image/smizy/sonnet.svg)](https://microbadger.com/images/smizy/sonnet "Get your own image badge on microbadger.com") 
+[![](https://images.microbadger.com/badges/version/smizy/sonnet.svg)](https://microbadger.com/images/smizy/sonnet "Get your own version badge on microbadger.com")
+[![build status](https://gitlab.com/smizy/docker-sonnet-tensorflow/badges/master/build.svg)](https://gitlab.com/smizy/docker-sonnet-tensorflow/commits/master)
 
 Python3 [Sonnet](https://github.com/deepmind/sonnet) with Jupyter docker image based on alpine
 
