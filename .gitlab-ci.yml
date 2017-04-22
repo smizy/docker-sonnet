@@ -36,7 +36,7 @@ image-build:
       --rm -t smizy/sonnet:${TAG} .
     - docker images | grep sonnet
 #    - docker push ${CI_REGISTRY}/smizy/sonnet:${TAG}
-    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS
     - docker tag smizy/sonnet:${TAG} smizy/sonnet
     - docker tag smizy/sonnet:${TAG} smizy/sonnet:${TAG_MINOR}
 #     - docker tag smizy/sonnet:${TAG} smizy/sonnet:${TAG_MAJOR}
@@ -45,7 +45,7 @@ image-build:
 #     - docker push smizy/sonnet:${TAG_MAJOR}
     - docker push smizy/sonnet:latest
     - docker logout
-    - curl -X POST 'https://hooks.microbadger.com/images/smizy/sonnet/pyM26dwHzHStGaBNdc2xQpQI-EI='
+    - curl -X POST 'https://hooks.microbadger.com/images/smizy/sonnet/YUzbFFYOG9OPXsKF5Rkua3yoeH4='
 
 # image-test:
 #   stage: test
